@@ -54,57 +54,37 @@ function buildgraph(selectedid){
       }];
            
       Plotly.newPlot('bar', trace);
+
+      var trace2 = {
+        type: 'bubble',
+        x: otuid,
+        y: sampleV,
+        text: otuLl,
+        mode: 'markers',
+        marker: {
+          color: otuid,
+          colorscale: [[0, 'rgb(0, 50, 75'], [1, 'rgb(76, 100, 250']],
+          size: sampleV
+        }
+      };
+      
+      var layout = {
+        title: 'Samples',
+        showlegend: false,
+        height: 500,
+        width: 1000,
+        xaxis: {title: {text: 'OTU ID'}}
+      };
+      Plotly.newPlot('bubble', [trace2], layout);
+
+
+
+
   }) //end of d3 then statement
 } //end of build graph function
 
 init();
    
-   
-    
-// // 3. Create a bubble chart that displays each sample.
-// //     *Use otu_ids for the x values.*Use sample_values for the y values.Use sample_values for the marker size.
-// //     Use otu_ids for the marker colors. *Use otu_labels for the text values.
-
-//       var trace2 = {
-//         type: 'bubble',
-//         //x: otuidstring,
-//         x: otuid,
-//         y: sampleV,
-//         text: otuLl,
-//         mode: 'markers',
-//         marker: {
-//           color: otuid,
-//           colorscale: [[0, 'rgb(0, 50, 75'], [1, 'rgb(76, 100, 250']],
-//           size: sampleV
-//         }
-//       };
-      
-//       var layout = {
-//         title: 'Samples',
-//         showlegend: false,
-//         height: 500,
-//         width: 1000,
-//         xaxis: {title: {text: 'OTU ID'}}
-//       };
-//       Plotly.newPlot('bubble', [trace2], layout);
-// //4. Display the sample metadata, i.e., an individual's demographic information.
-// //5.  Display each key-value pair from the metadata JSON object somewhere on the page.
-// //         var traceP = [{
-// //           type: 'panel',
-// //           x: sampleV,
-// //           //y: otuidstring,
-// //           y: otuidstring,
-// //           orientation: 'h',
-// //           text: otuLl
-// //         }];
-
-// // Plotly.newPlot('sample-metadata', traceP);
-//       // function optionChange(){
-//       //   var chosen_dataset=de.select('#selDataset').property('value')
-//       //   switch(chosen_dataset){
-//       //     case;
-//       //   };
-//       //   Plotly.restyle('bar', trace);
 //       // }
 // //BONUS -Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
 // //You will need to modify the example gauge code to account for values ranging from 0 through 9.
