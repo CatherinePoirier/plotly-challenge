@@ -1,8 +1,7 @@
 // 1. Use the D3 library to read in samples.json.
 // Fetch the JSON data and console log it
 function init(){
-  //d3.json("../../samples.json").then((data)=>
-  d3.json("samples.json").then((data)=>
+  d3.json("../../samples.json").then((data)=>
   {
       var names = data.names;
       var samples_array=data.samples;
