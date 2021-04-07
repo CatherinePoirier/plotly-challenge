@@ -32,16 +32,16 @@ function buildgraph(selectedid){
 
     var otuidarray = data.samples.filter(eachelement=>eachelement.id===selectedid);
     var selected_person=otuidarray[0];
-    var otuid =selected_person["otu_ids"]; 
-    var sample_otu_id=otuid.map(oneElement=>oneElement.toString()); 
+    var otuid=selected_person["otu_ids"]; 
+    var sample_otu_id=otuid.map(oneElement=>`OTU ID ${oneElement.toString()}`); 
     //console.log(sample_otu_id);
     var string_otu_id=sample_otu_id.slice(0, 10).reverse();
     
-    console.log(string_otu_id);
+    console.log(`string otu_id`, string_otu_id);
     var sampleV = selected_person["sample_values"].slice(0, 10).reverse();   
-    console.log(sampleV);
+    console.log(`string sampleV`, sampleV);
     var otuLl =selected_person["otu_labels"].slice(0, 10).reverse();  //console.log(otuLl);
-    
+    console.log(`otuL1`, otuLl);
     var trace = [{
         type: 'bar',
         x: sampleV,
@@ -49,7 +49,8 @@ function buildgraph(selectedid){
         orientation: 'h',
         text: otuLl
       }];
-           
+
+                
       Plotly.newPlot('bar', trace);
 
       var trace2 = {
