@@ -1,7 +1,8 @@
 // 1. Use the D3 library to read in samples.json.
 // Fetch the JSON data and console log it
 function init(){
-  d3.json("../../samples.json").then((data)=>
+ // d3.json("../../samples.json").then((data)=>
+    d3.json("samples.json").then((data)=>
 
   {
       var names = data.names;
@@ -25,7 +26,8 @@ function init(){
 // Use the first sample from the list to build the initial plots
 
 function buildgraph(selectedid){
-  d3.json("../../samples.json").then((data)=>{
+//  d3.json("../../samples.json").then((data)=>{
+  d3.json("samples.json").then((data)=>{
  
 
     var otuidarray = data.samples.filter(eachelement=>eachelement.id===selectedid);
