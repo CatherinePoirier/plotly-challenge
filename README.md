@@ -2,7 +2,7 @@
 Belly Button Biodiversity
 
 
-I build an interactive dashboard that shows the Belly Button Biodiversity regarding microbes that colonize human navels.
+I built an interactive dashboard that shows the Belly Button Biodiversity regarding microbes that colonize human navels.
 The results reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
 The following steps occured to created this dashboard.
