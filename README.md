@@ -13,4 +13,5 @@ Th bubble chart has different colors based on thte OTU_ids and sizes based on th
 There is also a demographic chart which displays the selected indivuidals demographic information: id, ethnicity, gender, age, olcation bbtype, and wfreq.
 All graphs and charts update to each time a new subject's id is selected.
 
+![](images/bubble_chart.png)
 
