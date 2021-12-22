@@ -17,7 +17,7 @@ All graphs and charts update to each time a new subject's id is selected.
 
 ### Tools Used
 
-JavaScript, Plotly.JS, Python, HTML, CSS, D3 Library, GitBash terminal, Git Hub
+JavaScript, Plotly.JS, Python, HTML, CSS, D3 Library, GitBash Terminal, Git Hub
 
 ### Screen Shots
 
